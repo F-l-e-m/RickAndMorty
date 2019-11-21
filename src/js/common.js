@@ -130,28 +130,28 @@ function renderCharacter(characters) {
 
 function characterTemplate({ name, image, status, species, gender }) {
 	return `
-		<div class="character font-sans flex flex-col bg-gray-400 shadow-md mb-16">
+		<div class="character flex flex-col bg-gray-800 shadow-md mb-16">
 			<img src="${image}" class="w-full">
-            <div class="p-4 flex flex-col">
+            <div class="p-4 flex flex-col text-gray-500">
                 <h1 class="font-bold text-xl mb-2">${name || ''}</h1>
 			    <div class="character__desc-block">
 				    <span class="character__desc">Status:</span>
-				    <span class="character__desk-value character__desk-value--status">${status || ''}</span>
+				    <span class="character__desk-value character__desk-value--status text-teal-400 ml-2">${status || ''}</span>
 			    </div>
 			    <div class="character__desc-block">
 				    <span class="character__desc">Species:</span>
-				    <span class="character__desk-value character__desk-value--species">${species || ''}</span>
+				    <span class="character__desk-value character__desk-value--species text-teal-400 ml-2">${species || ''}</span>
 			    </div>
 			    <div class="character__desc-block">
 				    <span class="character__desc">Gender:</span>
-				    <span class="character__desk-value character__desk-value--gender">${gender || ''}</span>
+				    <span class="character__desk-value character__desk-value--gender text-teal-400 ml-2">${gender || ''}</span>
 			    </div>
-			    <a href="https://www.google.com/search?q=Rick and morty ${name}" target="_blank">Read more</a>
+			    <a href="https://www.google.com/search?q=Rick and morty ${name}" target="_blank" class="text-orange-600">Read more</a>
 			</div>
 		</div>`;
 };
 
-btnMore.addEventListener('click', function() {
+btnMore.addEventListener('click', function(e) {
 	const searchText = inputSearch.value;
 	rickAndMortyService.topHeadlines(onGetResponse, ++pageNumber);
 });
