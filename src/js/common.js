@@ -151,7 +151,7 @@ function characterTemplate({ name, image, status, species, gender }) {
 		</div>`;
 };
 
-btnMore.addEventListener('click', function(e) {
+btnMore.addEventListener('click', function() {
 	const searchText = inputSearch.value;
 	rickAndMortyService.topHeadlines(onGetResponse, ++pageNumber);
 });
