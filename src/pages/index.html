@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <%= require('html-loader!../components/header/header.html') %>
+    <div class="wrapper">
+        <h1 class="title">Здесь представлены рандомные персонажи из сериала Рик и Морти. Данные взяты с https://rickandmortyapi.com/</h1>
+        <h1 class="alert"></h1>
+        <main class="content-container">
+        </main>
+        <button class="btn btn__more">Ещё</button>
+    </div>
+</body>
+</html>

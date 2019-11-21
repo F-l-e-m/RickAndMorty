@@ -1,0 +1,51 @@
+@import 'utils/fonts.scss';
+@import 'utils/reset.scss';
+@import 'utils/variables.scss';
+@import 'utils/mixins.scss';
+@import 'utils/libs.scss';
+@import 'utils/global.scss';
+@import '../../components/components.scss';
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.alert {
+    display: none;
+}
+
+
+.js-loader {
+    display: none;
+}
+
+.js-loader--show {
+    display: block;
+}
+
+@media screen and (min-width: 375px) {
+    .wrapper {
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .wrapper {
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .wrapper {
+        width: 940px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .wrapper {
+        width: 1400px;
+    }
+}
