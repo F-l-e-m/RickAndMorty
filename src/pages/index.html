@@ -10,9 +10,12 @@
 
     <%= require('html-loader!../components/header/header.html') %>
     <div class="wrapper">
-        <h1 class="title text-center mb-4 text-lg">Здесь представлены рандомные персонажи из сериала Рик и Морти. Данные взяты с <a href="https://rickandmortyapi.com/" target="_blank">https://rickandmortyapi.com/</a></h1>
+        <div class="bg-gray-800 p-2 text-center mb-24 text-sm text-gray-600 rounded-b-full">
+            <h1 class="title">Здесь Вы можете ознакомиться со всеми героями мультсериала "Rick and Morty". Данные взяты с <a href="https://rickandmortyapi.com/" target="_blank" class="text-orange-600">https://rickandmortyapi.com/</a></h1>
+            <p>Что бы найти героя по имени, воспользуйтесь поиском выше</p>
+            <p>Что бы получить ещё героев, нажмите на кнопку <span class="text-teal-400">Next</span></p>
+        </div>
         <h1 class="alert"></h1>
-        <button class="btn btn__more bg-blue-900 border-0 py-2 px-8 block mx-auto text-lg text-orange-600 rounded-sm shadow mb-24">Random</button>
         <main class="content-container">
         </main>
     </div>
