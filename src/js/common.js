@@ -130,7 +130,7 @@ function renderCharacter(characters) {
 
 function characterTemplate({ name, image, status, species, gender }) {
 	return `
-		<div class="character flex flex-col bg-gray-800 shadow-md mb-16">
+		<div class="character mx-auto flex flex-col bg-gray-800 shadow-md mb-16">
 			<img src="${image}" class="w-full">
             <div class="p-4 flex flex-col text-gray-500">
                 <h1 class="font-bold text-xl mb-2">${name || ''}</h1>
