@@ -154,6 +154,7 @@ function characterTemplate({ name, image, status, species, gender }) {
 };
 
 btnPrev.addEventListener('click', function() {
+    inputSearch.value = '';
     if(pageNumber <= 1) {
         return;
     }
@@ -161,6 +162,7 @@ btnPrev.addEventListener('click', function() {
 });
 
 btnNext.addEventListener('click', function() {
+    inputSearch.value = '';
     if(pageNumber >= 20) {
         return;
     }
