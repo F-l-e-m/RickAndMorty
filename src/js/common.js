@@ -1,5 +1,6 @@
 // UI
-const btnMore = document.querySelector('.btn__more');
+const btnPrev = document.querySelector('.btn__prev');
+const btnNext = document.querySelector('.btn__next');
 const inputSearch = document.querySelector('.js-input-search');
 const loader = document.querySelector('.js-loader');
 
@@ -98,6 +99,7 @@ function loadCharacter() {
 };
 
 function onGetResponse(err, res) {
+    console.log(res);
 	removeLoader();
 
 	if (err) {
@@ -151,8 +153,17 @@ function characterTemplate({ name, image, status, species, gender }) {
 		</div>`;
 };
 
-btnMore.addEventListener('click', function() {
-	const searchText = inputSearch.value;
+btnPrev.addEventListener('click', function() {
+    if(pageNumber <= 1) {
+        return;
+    }
+	rickAndMortyService.topHeadlines(onGetResponse, --pageNumber);
+});
+
+btnNext.addEventListener('click', function() {
+    if(pageNumber >= 20) {
+        return;
+    }
 	rickAndMortyService.topHeadlines(onGetResponse, ++pageNumber);
 });
 
